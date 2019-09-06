@@ -1,5 +1,6 @@
 #pagetop{
     background-color:lightblue;
+    grid-column: span 2;
 }
 
 #activate{
@@ -8,8 +9,51 @@
 
 #perles{
     background-color: lightgray;
+    display: grid;
 }
 
 #pagebottom{
     background-color: darkslategrey;
+    grid-column: span 2;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+#perles>h2{
+    grid-column: span 2;
+    text-align: center;
+}
+
+#perles>div#plus{
+    grid-column: span 2;
+    text-align: center;
+}
+
+@media screen and (max-width:400px)
+{
+    body{
+        display: block;
+    }
+    
+    #activate{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+    
+    #activate>p{
+        grid-column: span 1;
+    }
+    
+    #activate>ul>li{
+        
+    }
+}
+
+.btn-dark
+{
+    background-color: black;
+    color: white;
 }
